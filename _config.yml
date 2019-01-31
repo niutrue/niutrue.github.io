@@ -16,7 +16,7 @@
 theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 locale: en-US
-title: "So Simple Development Site"
+title: "韦伯的庄园"
 description: "A simple Jekyll theme for words and pictures."
 baseurl: #"/example" # the subpath of your site, e.g. "/blog"
 url: "https://mmistakes.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
