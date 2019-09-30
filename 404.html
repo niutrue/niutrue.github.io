@@ -59,8 +59,10 @@ layout: default
   var isWx = isWeiXin()
   
   if(isWx){
+    alert('微信')
     document.querySelector('.mask').style.display='block'
   } else {
+      alert('不是微信')
     document.querySelector('.mask').style.display='none'
   }
 </script>
