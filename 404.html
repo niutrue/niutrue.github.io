@@ -3,16 +3,46 @@ layout: default
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+    .mask{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:1;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.8);
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+  .wxandriodguideTips{
+      padding-top:40px;
+  }
+  .wxandriodguideTips span {
+      color:#fff;
+  }
+  .imgTip1{
+      margin:20px 0;
+  }
+  .imgTip1 img{
+      width:300px;
+  }
+  .imgTip2{
+      margin-top:20px;
+  }
+  .imgTip2 img{
+      width:80px;
+  }
+  .wxTip{
+    margin-top:50px;
+    text-align:center;
+    color:#000;
+  }
+  .download{
+    margin-top: 30px;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
   }
 </style>
 
@@ -28,12 +58,30 @@ layout: default
   
   var isWx = isWeiXin()
   
-  alert(isWx)
+  if(isWx){
+    document.querySelector('.mask').style.display='block'
+  } else {
+    document.querySelector('.mask').style.display='none'
+  }
 </script>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="androidversion">
+    <!-- <p class='wxTip'>{{tipText}}</p> -->
+    <a class="download" :href='downloadUrl' download="下载京师书法安卓端">立即下载</a>
+    <div class='mask'>
+        <div class="wxandriodguideTips">
+            <div class="titleTips">
+                <span class="step_num">1</span><span class="step_content">点击手机屏幕右上角</span>
+            </div>
+            <div class="imgTip1">
+                <img class="img1" id="rightandroid" src="../assets/images/right_android3x.png">
+            </div>
+            <div class="titleTips">
+                <span class="step_num">2</span><span class="step_content">选择用“浏览器”打开</span>
+            </div>
+            <div class="imgTip2">
+                <img class="img2" id="explorerandroid" src="../assets/images/browser_android3x.png">
+            </div>
+        </div>
+    </div>
+  </div>
